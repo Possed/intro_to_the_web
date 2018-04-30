@@ -2,10 +2,6 @@
 <img src ='http://bit.ly/1eze8aE'>
 </div>
 
+<% if @name != "" %>
 <h1>My name is <%=@name%></h1>
-<% if @name.nil? || @name == "" %>
-<form action="/named_cat">
-  <input type="text" name="name">
-  <input type="submit" value="Submit">
-</form>
 <% end %>
