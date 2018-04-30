@@ -12,5 +12,6 @@ get '/joke' do
 end
 
 get '/cat' do
+  @random_name = ['Roxana', 'Sam'].sample
   erb(:index)
 end
