@@ -3,7 +3,9 @@
 </div>
 
 <h1>My name is <%=@name%></h1>
+<% if @name.nil? || @name == "" %>
 <form action="/named_cat">
   <input type="text" name="name">
   <input type="submit" value="Submit">
 </form>
+<% end %>
