@@ -11,7 +11,14 @@ get '/joke' do
   "a snowman asks another snowman: Do you smell carrots?"
 end
 
-get '/cat' do
-  @random_name = ['Roxana', 'Sam'].sample
+get '/random_cat' do
+  @name = ['Roxana', 'Sam'].sample
+  erb(:index)
+end
+
+get '/named_cat' do
+  p params
+  @name = params[:name]
+  @color = params[:color]
   erb(:index)
 end
